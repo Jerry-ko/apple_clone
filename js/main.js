@@ -155,8 +155,6 @@
         switch (currentScene) {
             case 0:
                 // console.log('0 play');
-                objs.canvas.style.opacity = calcValues(values.canvas_opacity, currentYOffset);
-
 				if (scrollRatio <= 0.22) {
 					// in
 					objs.messageA.style.opacity = calcValues(values.messageA_opacity_in, currentYOffset);
