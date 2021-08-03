@@ -453,6 +453,13 @@
                         objs.canvas.classList.remove('sticky')
                         objs.canvas.style.marginTop = `${scrollHeight * 0.4}px`
 
+                        values.canvasCaption_opacity[2].start = values.canvas_scale[2].end
+                        values.canvasCaption_opacity[2].end = values.canvasCaption_opacity[2].start + 0.1;
+                        values.canvasCaption_translateY[2].start =  values.canvasCaption_opacity[2].start 
+                        values.canvasCaption_translateY[2].end = values.canvasCaption_opacity[2].end
+                        objs.canvasCaption.style.opacity = calcValues(values.canvasCaption_opacity, currentYOffset)
+                        objs.canvasCaption.style.transform = `translate3d(0, ${calcValues(values.canvasCaption_translateY, currentYOffset)}%, 0)`
+
                     }
                 }
 
